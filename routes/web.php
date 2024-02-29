@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\CategoriaApiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\ProductoController;
@@ -24,3 +25,4 @@ Route::get('/inicio', [InicioController::class, 'index']);
 
 Route::resource('categorias',CategoriaController::class);
 Route::resource('productos',ProductoController::class);
+Route::get('/api/categorias', [CategoriaApiController::class,'index']);
