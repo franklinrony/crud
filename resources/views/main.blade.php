@@ -19,20 +19,34 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand navbar-light bg-light">
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
             <ul class="nav navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#" aria-current="page"
+                    <a class="nav-link active" href="{{'/inicio'}}" aria-current="page"
                         >SISTEMA VENTAS <span class="visually-hidden">(current)</span></a
                     >
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nav 2</a>
+                    <a class="nav-link" href="{{url('productos')}}">PRODUCTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('categorias')}}">CATEGORIAS</a>
                 </li>
             </ul>
         </nav>
         
-        <main class="container"></main>
+        <main class="container">
+            <div
+                class="row"
+            >
+                <div class="col-md-2 "></div>
+                <div class="col-md-8 mt-4">
+                    @yield('content')
+                </div>
+                <div class="col-md-2 "></div>
+            </div>
+            
+        </main>
         
         <!-- Bootstrap JavaScript Libraries -->
         <script
